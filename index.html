@@ -1,0 +1,1150 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OnlineHelp | Advanced Laptop Security</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <script>
+      tailwind.config = {
+        theme: { extend: { colors: { primary: "#22c55e", dark: "#0f172a" } } },
+      };
+    </script>
+  </head>
+  <body class="bg-slate-950 text-white font-sans">
+    <nav
+      class="fixed w-full z-50 bg-slate-950/80 backdrop-blur-md border-b border-slate-800"
+    >
+      <div
+        class="container mx-auto px-6 py-4 flex justify-between items-center"
+      >
+        <div class="text-2xl font-bold text-primary italic tracking-tighter">
+          ONLINE<span class="text-white">HELP</span>
+        </div>
+
+        <div class="hidden md:flex space-x-8 font-medium text-white">
+          <a href="#home" class="hover:text-primary transition">Home</a>
+          <a href="#features" class="hover:text-primary transition">Features</a>
+          <a href="#services" class="hover:text-primary transition">Services</a>
+          <a href="#pricing" class="hover:text-primary transition">Pricing</a>
+          <a href="#contact" class="hover:text-primary transition">Contact</a>
+        </div>
+
+        <button
+          onclick="openExpertModal()"
+          class="hidden md:block bg-primary px-5 py-2 rounded-full text-sm font-bold hover:bg-white transition text-slate-950"
+        >
+          Talk to Expert
+        </button>
+
+        <button id="menu-btn" class="md:hidden text-2xl text-white">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+
+      <div
+        id="mobile-menu"
+        class="hidden md:hidden bg-slate-900 border-t border-slate-800 py-6 px-6 space-y-4 text-center"
+      >
+        <a href="#home" class="block text-lg hover:text-primary transition"
+          >Home</a
+        >
+        <a href="#features" class="block text-lg hover:text-primary transition"
+          >Features</a
+        >
+        <a href="#services" class="block text-lg hover:text-primary transition"
+          >Services</a
+        >
+        <a href="#pricing" class="block text-lg hover:text-primary transition"
+          >Pricing</a
+        >
+        <a href="#contact" class="block text-lg hover:text-primary transition"
+          >Contact</a
+        >
+        <button
+          onclick="openExpertModal()"
+          class="w-full block bg-primary py-3 rounded-lg font-bold text-slate-950 text-center"
+        >
+          Talk to Expert
+        </button>
+      </div>
+    </nav>
+
+    <div
+      id="expert-modal"
+      class="fixed inset-0 z-[100] hidden items-center justify-center p-4 bg-slate-950/90 backdrop-blur-md"
+    >
+      <div
+        id="expert-modal-content"
+        class="bg-slate-900 border border-slate-700 w-full max-w-lg rounded-3xl overflow-hidden shadow-2xl transform transition-all scale-95 opacity-0 duration-300 relative"
+      >
+        <button
+          onclick="closeExpertModal()"
+          class="absolute top-6 right-6 text-slate-500 hover:text-white transition-colors"
+        >
+          <i class="fa-solid fa-xmark text-2xl"></i>
+        </button>
+
+        <div class="p-12 text-center">
+          <div
+            class="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6"
+          >
+            <i class="fa-solid fa-paper-plane text-4xl text-primary"></i>
+          </div>
+
+          <h2 class="text-3xl font-black text-white mb-4">
+            Thank You So Much!
+          </h2>
+
+          <p class="text-slate-400 mb-10 leading-relaxed max-w-sm mx-auto">
+            Your request has been successfully generated.
+            <span class="text-white font-semibold"
+              >Our team will connect with you soon</span
+            >
+            to discuss your security requirements.
+          </p>
+
+          <button
+            onclick="closeExpertModal()"
+            class="w-full border border-slate-700 text-white py-4 rounded-xl hover:bg-slate-800 transition-all font-bold tracking-widest uppercase text-xs"
+          >
+            Close Window
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <section
+      id="home"
+      class="relative min-h-screen flex items-center pt-20 bg-slate-950 overflow-hidden"
+    >
+      <div
+        class="absolute top-0 right-0 w-2/3 h-full bg-primary/5 blur-[120px] rounded-full"
+      ></div>
+      <div
+        class="absolute bottom-0 left-0 w-1/3 h-1/2 bg-blue-500/5 blur-[100px] rounded-full"
+      ></div>
+
+      <div
+        class="container mx-auto px-6 relative grid lg:grid-cols-2 gap-12 items-center"
+      >
+        <div class="space-y-8">
+          <div>
+            <div
+              class="inline-flex items-center gap-2 bg-slate-900 border border-slate-700 px-4 py-2 rounded-full text-xs font-bold text-primary mb-6 tracking-widest uppercase"
+            >
+              <i class="fa-solid fa-shield-check"></i> Next-Gen AI Protection
+            </div>
+            <h1
+              class="text-5xl md:text-8xl font-black leading-none mb-6 text-white tracking-tighter"
+            >
+              Stop Threats <br /><span class="text-primary text-glow"
+                >In Real-Time.</span
+              >
+            </h1>
+            <p class="text-slate-400 text-xl leading-relaxed max-w-lg">
+              Enterprise-grade security for your home office. Use our AI engine
+              to neutralize malware, ransomware, and zero-day exploits
+              instantly.
+            </p>
+          </div>
+
+          <div class="relative max-w-md group">
+            <div
+              class="absolute -inset-1 bg-gradient-to-r from-primary to-blue-600 rounded-2xl blur opacity-20 group-hover:opacity-40 transition duration-1000"
+            ></div>
+            <div
+              class="relative bg-slate-900/80 border border-slate-800 p-6 rounded-2xl backdrop-blur-sm"
+            >
+              <div id="scan-init-content">
+                <p
+                  class="text-slate-300 font-bold mb-4 flex items-center gap-2"
+                >
+                  <span class="relative flex h-3 w-3">
+                    <span
+                      class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"
+                    ></span>
+                    <span
+                      class="relative inline-flex rounded-full h-3 w-3 bg-primary"
+                    ></span>
+                  </span>
+                  System Status: <span class="text-slate-500">Unverified</span>
+                </p>
+                <button
+                  onclick="runHeroScan()"
+                  class="group flex items-center justify-center gap-3 w-full bg-white text-slate-950 py-4 rounded-xl font-black text-lg hover:bg-primary transition-all shadow-xl shadow-primary/10"
+                >
+                  <i
+                    class="fa-solid fa-bolt-lightning group-hover:animate-pulse"
+                  ></i>
+                  RUN DEEP AI SCAN
+                </button>
+              </div>
+
+              <div id="scan-running" class="hidden space-y-4">
+                <div class="flex justify-between items-end">
+                  <div>
+                    <h4
+                      id="hero-status-text"
+                      class="text-primary font-bold text-sm"
+                    >
+                      Initializing...
+                    </h4>
+                    <p
+                      class="text-slate-500 text-[10px] font-mono uppercase tracking-widest"
+                    >
+                      Thread_ID: 0x88219
+                    </p>
+                  </div>
+                  <span id="scan-percent" class="text-white font-mono font-bold"
+                    >0%</span
+                  >
+                </div>
+                <div
+                  class="w-full bg-slate-800 h-2 rounded-full overflow-hidden"
+                >
+                  <div
+                    id="hero-progress-bar"
+                    class="bg-primary h-full w-0 transition-all duration-300 shadow-[0_0_15px_rgba(var(--primary-rgb),0.5)]"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="relative">
+          <div
+            id="form-container"
+            class="bg-slate-900 border border-slate-800 p-8 md:p-10 rounded-[2.5rem] shadow-2xl relative transition-all duration-500"
+          >
+            <div class="mb-8">
+              <h3 class="text-2xl font-bold text-white mb-2">
+                Secure Your Access
+              </h3>
+              <p class="text-slate-500 text-sm">
+                Enter your details to receive the full security analysis and
+                protection suite.
+              </p>
+            </div>
+
+            <form
+              id="lead-form"
+              class="space-y-4"
+              onsubmit="handleFinalSubmit(event)"
+            >
+              <div class="space-y-1">
+                <label
+                  class="text-[10px] font-black text-slate-500 uppercase tracking-widest ml-1"
+                  >Full Name</label
+                >
+                <input
+                  type="text"
+                  required
+                  placeholder="John Doe"
+                  class="w-full bg-slate-950 border border-slate-800 p-4 rounded-xl focus:border-primary focus:ring-1 focus:ring-primary outline-none transition text-white"
+                />
+              </div>
+
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="space-y-1">
+                  <label
+                    class="text-[10px] font-black text-slate-500 uppercase tracking-widest ml-1"
+                    >Mobile Number</label
+                  >
+                  <input
+                    type="tel"
+                    required
+                    placeholder="+1 (555) 000-0000"
+                    class="w-full bg-slate-950 border border-slate-800 p-4 rounded-xl focus:border-primary outline-none transition text-white"
+                  />
+                </div>
+                <div class="space-y-1">
+                  <label
+                    class="text-[10px] font-black text-slate-500 uppercase tracking-widest ml-1"
+                    >System Type</label
+                  >
+                  <select
+                    required
+                    class="w-full bg-slate-950 border border-slate-800 p-4 rounded-xl focus:border-primary outline-none transition text-slate-400 appearance-none"
+                  >
+                    <option value="">Select System</option>
+                    <option>Windows PC</option>
+                    <option>Mac/macOS</option>
+                    <option>Linux Workstation</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="space-y-1">
+                <label
+                  class="text-[10px] font-black text-slate-500 uppercase tracking-widest ml-1"
+                  >Work Email</label
+                >
+                <input
+                  type="email"
+                  required
+                  placeholder="john@company.com"
+                  class="w-full bg-slate-950 border border-slate-800 p-4 rounded-xl focus:border-primary outline-none transition text-white"
+                />
+              </div>
+
+              <button
+                type="submit"
+                class="w-full bg-primary text-slate-950 py-5 rounded-xl font-black text-lg hover:scale-[1.02] active:scale-[0.98] transition-all shadow-xl shadow-primary/20 mt-4"
+              >
+                GENERATE REPORT
+              </button>
+            </form>
+
+            <div
+              id="thank-you-state"
+              class="hidden py-10 text-center animate-in fade-in slide-in-from-bottom-4 duration-700"
+            >
+              <div
+                class="w-20 h-20 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-6"
+              >
+                <i class="fa-solid fa-check text-4xl text-primary"></i>
+              </div>
+              <h2 class="text-3xl font-black text-white mb-4">Request Sent!</h2>
+              <p class="text-slate-400 leading-relaxed">
+                Our security team is analyzing your request. A custom report
+                will be sent to <br />
+                <span id="display-email" class="text-primary font-bold"
+                  >your email</span
+                >
+                shortly.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="features" class="py-20 container mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center mb-16">Security Features</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div
+          class="p-6 bg-slate-900 rounded-xl border border-slate-800 hover:border-primary transition"
+        >
+          <i class="fa-solid fa-shield-halved text-primary text-4xl mb-4"></i>
+          <h4 class="text-xl font-bold mb-2">Real-Time Protection</h4>
+          <p class="text-slate-400">
+            Constant monitoring to neutralize threats before they execute.
+          </p>
+        </div>
+        <div
+          class="p-6 bg-slate-900 rounded-xl border border-slate-800 hover:border-primary transition"
+        >
+          <i class="fa-solid fa-bug text-primary text-4xl mb-4"></i>
+          <h4 class="text-xl font-bold mb-2">Malware Detection</h4>
+          <p class="text-slate-400">
+            Deep scanning engines to identify and eliminate hidden threats.
+          </p>
+        </div>
+        <div
+          class="p-6 bg-slate-900 rounded-xl border border-slate-800 hover:border-primary transition"
+        >
+          <i class="fa-solid fa-lock text-primary text-4xl mb-4"></i>
+          <h4 class="text-xl font-bold mb-2">Ransomware Defense</h4>
+          <p class="text-slate-400">
+            Protect your personal files from encryption and extortion.
+          </p>
+        </div>
+        <div
+          class="p-6 bg-slate-900 rounded-xl border border-slate-800 hover:border-primary transition"
+        >
+          <i class="fa-solid fa-globe text-primary text-4xl mb-4"></i>
+          <h4 class="text-xl font-bold mb-2">Secure Browsing</h4>
+          <p class="text-slate-400">
+            Block malicious websites and phishing attempts instantly.
+          </p>
+        </div>
+        <div
+          class="p-6 bg-slate-900 rounded-xl border border-slate-800 hover:border-primary transition"
+        >
+          <i class="fa-solid fa-arrows-rotate text-primary text-4xl mb-4"></i>
+          <h4 class="text-xl font-bold mb-2">Auto-Updates</h4>
+          <p class="text-slate-400">
+            Ensuring your database is always up to date with new threats.
+          </p>
+        </div>
+        <div
+          class="p-6 bg-slate-900 rounded-xl border border-slate-800 hover:border-primary transition"
+        >
+          <i class="fa-solid fa-fire text-primary text-4xl mb-4"></i>
+          <h4 class="text-xl font-bold mb-2">Firewall Security</h4>
+          <p class="text-slate-400">
+            Control incoming and outgoing network traffic.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="py-20 bg-slate-900">
+      <h2 class="text-4xl font-bold text-center mb-16">Services</h2>
+      <div class="container mx-auto px-6">
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div
+            class="p-8 bg-slate-950 border border-slate-800 rounded-2xl hover:border-primary transition-all group"
+          >
+            <div
+              class="w-12 h-12 bg-slate-800 flex items-center justify-center rounded-lg mb-6 text-primary group-hover:bg-primary group-hover:text-slate-950 transition"
+            >
+              <i class="fa-solid fa-download text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-3">Antivirus Installation</h3>
+            <p class="text-slate-400 text-sm leading-relaxed">
+              Professional configuration of premium security suites tailored to
+              your specific hardware and OS needs.
+            </p>
+          </div>
+
+          <div
+            class="p-8 bg-slate-950 border border-slate-800 rounded-2xl hover:border-primary transition-all group"
+          >
+            <div
+              class="w-12 h-12 bg-slate-800 flex items-center justify-center rounded-lg mb-6 text-primary group-hover:bg-primary group-hover:text-slate-950 transition"
+            >
+              <i class="fa-solid fa-virus-slash text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-3">Virus Removal</h3>
+            <p class="text-slate-400 text-sm leading-relaxed">
+              Deep-system scans to identify, quarantine, and permanently purge
+              malware, trojans, and rootkits.
+            </p>
+          </div>
+
+          <div
+            class="p-8 bg-slate-950 border border-slate-800 rounded-2xl hover:border-primary transition-all group"
+          >
+            <div
+              class="w-12 h-12 bg-slate-800 flex items-center justify-center rounded-lg mb-6 text-primary group-hover:bg-primary group-hover:text-slate-950 transition"
+            >
+              <i class="fa-solid fa-gauge-high text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-3">System Optimization</h3>
+            <p class="text-slate-400 text-sm leading-relaxed">
+              Boost performance by cleaning registry errors, removing bloatware,
+              and optimizing startup processes.
+            </p>
+          </div>
+
+          <div
+            class="p-8 bg-slate-950 border border-slate-800 rounded-2xl hover:border-primary transition-all group"
+          >
+            <div
+              class="w-12 h-12 bg-slate-800 flex items-center justify-center rounded-lg mb-6 text-primary group-hover:bg-primary group-hover:text-slate-950 transition"
+            >
+              <i class="fa-solid fa-user-shield text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-3">Security Consultation</h3>
+            <p class="text-slate-400 text-sm leading-relaxed">
+              Expert advice on data privacy, secure password practices, and
+              network safety for your peace of mind.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="pricing" class="py-20 bg-slate-950">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold mb-4">Flexible Pricing Plans</h2>
+          <p class="text-slate-400">
+            Choose the perfect level of protection for your digital life.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div
+            class="p-8 bg-slate-900 border border-slate-800 rounded-2xl flex flex-col hover:border-slate-600 transition"
+          >
+            <h3 class="text-xl font-bold mb-4">Basic</h3>
+            <div class="text-4xl font-bold mb-6">
+              $29<span class="text-lg text-slate-500 font-normal">/year</span>
+            </div>
+            <ul class="space-y-4 mb-8 text-slate-400">
+              <li>
+                <i class="fa-solid fa-check text-primary mr-2"></i> Real-Time
+                Protection
+              </li>
+              <li>
+                <i class="fa-solid fa-check text-primary mr-2"></i> Malware
+                Detection
+              </li>
+              <li class="opacity-50">
+                <i class="fa-solid fa-xmark text-red-500 mr-2"></i> Firewall
+                Security
+              </li>
+            </ul>
+            <a
+              href="#contacts"
+              class="text-center mt-auto w-full py-3 rounded-lg border border-primary text-primary hover:bg-primary hover:text-slate-950 transition font-bold"
+            >
+              Select Plan
+            </a>
+          </div>
+
+          <div
+            class="p-8 bg-slate-900 border-2 border-primary rounded-2xl flex flex-col relative transform md:-translate-y-4"
+          >
+            <span
+              class="absolute -top-3 left-1/2 -translate-x-1/2 bg-primary text-slate-950 px-4 py-1 rounded-full text-xs font-bold uppercase"
+              >Popular</span
+            >
+            <h3 class="text-xl font-bold mb-4">Professional</h3>
+            <div class="text-4xl font-bold mb-6">
+              $59<span class="text-lg text-slate-500 font-normal">/year</span>
+            </div>
+            <ul class="space-y-4 mb-8 text-slate-400">
+              <li>
+                <i class="fa-solid fa-check text-primary mr-2"></i> Everything
+                in Basic
+              </li>
+              <li>
+                <i class="fa-solid fa-check text-primary mr-2"></i> Ransomware
+                Protection
+              </li>
+              <li>
+                <i class="fa-solid fa-check text-primary mr-2"></i> Firewall
+                Security
+              </li>
+            </ul>
+            <a
+              href="#contacts"
+              class="text-center mt-auto w-full py-3 rounded-lg border border-primary text-primary hover:bg-primary hover:text-slate-950 transition font-bold"
+            >
+              Select Plan
+            </a>
+          </div>
+
+          <div
+            class="p-8 bg-slate-900 border border-slate-800 rounded-2xl flex flex-col hover:border-slate-600 transition"
+          >
+            <h3 class="text-xl font-bold mb-4">Premium</h3>
+            <div class="text-4xl font-bold mb-6">
+              $99<span class="text-lg text-slate-500 font-normal">/year</span>
+            </div>
+            <ul class="space-y-4 mb-8 text-slate-400">
+              <li>
+                <i class="fa-solid fa-check text-primary mr-2"></i> Everything
+                in Pro
+              </li>
+              <li>
+                <i class="fa-solid fa-check text-primary mr-2"></i> 24/7
+                Priority Help
+              </li>
+              <li>
+                <i class="fa-solid fa-check text-primary mr-2"></i> Security
+                Consultation
+              </li>
+            </ul>
+            <a
+              href="#contacts"
+              class="text-center mt-auto w-full py-3 rounded-lg border border-primary text-primary hover:bg-primary hover:text-slate-950 transition font-bold"
+            >
+              Select Plan
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="testimonials" class="py-20 bg-slate-900">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold mb-4">Trusted by Thousands</h2>
+          <p class="text-slate-400">
+            See what our clients have to say about their experience with
+            OnlineHelp.
+          </p>
+        </div>
+        <div class="grid md:grid-cols-3 gap-8">
+          <div
+            class="p-8 bg-slate-950 border border-slate-800 rounded-2xl hover:border-primary transition"
+          >
+            <div class="flex text-primary mb-4 text-sm">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+              ><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+              ><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="text-slate-400 mb-6 italic">
+              "The real-time protection is incredible. It caught a ransomware
+              threat within minutes of installation. Highly recommended!"
+            </p>
+            <div class="flex items-center">
+              <img
+                src="[https://i.pravatar.cc/50?u=1](https://i.pravatar.cc/50?u=1)"
+                alt="User"
+                class="w-12 h-12 rounded-full border-2 border-slate-700 mr-4"
+              />
+              <div>
+                <h4 class="font-bold">Sarah Jenkins</h4>
+                <span class="text-xs text-slate-500 uppercase"
+                  >Software Engineer</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="p-8 bg-slate-950 border border-slate-800 rounded-2xl hover:border-primary transition"
+          >
+            <div class="flex text-primary mb-4 text-sm">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+              ><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+              ><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="text-slate-400 mb-6 italic">
+              "My laptop was running so slow due to hidden malware. The
+              optimization service made it feel brand new again."
+            </p>
+            <div class="flex items-center">
+              <img
+                src="[https://i.pravatar.cc/50?u=2](https://i.pravatar.cc/50?u=2)"
+                alt="User"
+                class="w-12 h-12 rounded-full border-2 border-slate-700 mr-4"
+              />
+              <div>
+                <h4 class="font-bold">Marcus Chen</h4>
+                <span class="text-xs text-slate-500 uppercase"
+                  >Digital Designer</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="p-8 bg-slate-950 border border-slate-800 rounded-2xl hover:border-primary transition"
+          >
+            <div class="flex text-primary mb-4 text-sm">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+              ><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+              ><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="text-slate-400 mb-6 italic">
+              "Expert consultation helped me secure my entire home network. The
+              support team is fast and very professional."
+            </p>
+            <div class="flex items-center">
+              <img
+                src="[https://i.pravatar.cc/50?u=3](https://i.pravatar.cc/50?u=3)"
+                alt="User"
+                class="w-12 h-12 rounded-full border-2 border-slate-700 mr-4"
+              />
+              <div>
+                <h4 class="font-bold">Elena Rodriguez</h4>
+                <span class="text-xs text-slate-500 uppercase"
+                  >Freelance Consultant</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="stats" class="py-20 bg-slate-950">
+      <div class="container mx-auto px-6">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div
+            class="p-6 bg-slate-900 border border-slate-800 rounded-xl hover:border-primary transition-all duration-300 hover:-translate-y-2"
+          >
+            <h3
+              class="text-3xl md:text-4xl font-black text-white mb-1"
+              data-target="5000"
+            >
+              0+
+            </h3>
+            <p
+              class="text-primary text-sm font-semibold uppercase tracking-wider"
+            >
+              Devices Protected
+            </p>
+          </div>
+
+          <div
+            class="p-6 bg-slate-900 border border-slate-800 rounded-xl hover:border-primary transition-all duration-300 hover:-translate-y-2"
+          >
+            <h3
+              class="text-3xl md:text-4xl font-black text-white mb-1"
+              data-target="2000"
+            >
+              0+
+            </h3>
+            <p
+              class="text-primary text-sm font-semibold uppercase tracking-wider"
+            >
+              Happy Clients
+            </p>
+          </div>
+
+          <div
+            class="p-6 bg-slate-900 border border-slate-800 rounded-xl hover:border-primary transition-all duration-300 hover:-translate-y-2"
+          >
+            <h3
+              class="text-3xl md:text-4xl font-black text-white mb-1"
+              data-target="24"
+            >
+              0/7
+            </h3>
+            <p
+              class="text-primary text-sm font-semibold uppercase tracking-wider"
+            >
+              Active
+            </p>
+          </div>
+
+          <div
+            class="p-6 bg-slate-900 border border-slate-800 rounded-xl hover:border-primary transition-all duration-300 hover:-translate-y-2"
+          >
+            <h3
+              class="text-3xl md:text-4xl font-black text-white mb-1"
+              data-target="99"
+            >
+              0%
+            </h3>
+            <p
+              class="text-primary text-sm font-semibold uppercase tracking-wider"
+            >
+              Threat Detection
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 bg-slate-900">
+      <div class="container mx-auto px-6 max-w-3xl">
+        <h2 class="text-3xl font-bold text-center mb-10">
+          Frequently Asked Questions
+        </h2>
+        <div class="space-y-4">
+          <div class="border-b border-slate-700 pb-4">
+            <button
+              onclick="toggleFAQ(this)"
+              class="w-full text-left font-bold flex justify-between items-center py-2"
+            >
+              <span>What is a computer virus?</span>
+              <i class="fa-solid fa-chevron-down text-sm text-primary"></i>
+            </button>
+            <p class="hidden pt-2 text-slate-400">
+              A computer virus is a type of malicious software (malware) that
+              attaches itself to legitimate programs or files. Once executed, it
+              can replicate, spread to other files, and perform unauthorized
+              actions like stealing data, damaging your system, or slowing down
+              performance.
+            </p>
+          </div>
+
+          <div class="border-b border-slate-700 pb-4">
+            <button
+              onclick="toggleFAQ(this)"
+              class="w-full text-left font-bold flex justify-between items-center py-2"
+            >
+              <span>Why does my PC need antivirus software?</span>
+              <i class="fa-solid fa-chevron-down text-sm text-primary"></i>
+            </button>
+            <p class="hidden pt-2 text-slate-400">
+              Modern cyber threats are sophisticated and constant. Antivirus
+              software acts as a gatekeeper, providing real-time protection,
+              blocking malicious downloads, preventing access to scam websites,
+              and scanning your files to stop malware before it can cause
+              damage.
+            </p>
+          </div>
+
+          <div class="border-b border-slate-700 pb-4">
+            <button
+              onclick="toggleFAQ(this)"
+              class="w-full text-left font-bold flex justify-between items-center py-2"
+            >
+              <span>What makes AVG AntiVirus Free a top choice?</span>
+              <i class="fa-solid fa-chevron-down text-sm text-primary"></i>
+            </button>
+            <p class="hidden pt-2 text-slate-400">
+              AVG AntiVirus Free is trusted by millions because it offers
+              award-winning, industrial-strength protection without the price
+              tag. It provides real-time updates, advanced behavioral analysis
+              to catch new threats, and a very light system impact, meaning it
+              won't slow down your laptop.
+            </p>
+          </div>
+
+          <div class="border-b border-slate-700 pb-4">
+            <button
+              onclick="toggleFAQ(this)"
+              class="w-full text-left font-bold flex justify-between items-center py-2"
+            >
+              <span>How does AVG protect against threats?</span>
+              <i class="fa-solid fa-chevron-down text-sm text-primary"></i>
+            </button>
+            <p class="hidden pt-2 text-slate-400">
+              AVG uses "Core Shields." These monitor your files in real-time,
+              scan incoming emails for malicious attachments, block dangerous
+              website scripts, and analyze the behavior of programs on your
+              computer to identify and stop suspicious activity, even if it
+              hasn't been seen before.
+            </p>
+          </div>
+
+          <div class="border-b border-slate-700 pb-4">
+            <button
+              onclick="toggleFAQ(this)"
+              class="w-full text-left font-bold flex justify-between items-center py-2"
+            >
+              <span>How can I do a free virus scan?</span>
+              <i class="fa-solid fa-chevron-down text-sm text-primary"></i>
+            </button>
+            <p class="hidden pt-2 text-slate-400">
+              It's simple: download and install your chosen free antivirus
+              software. Once installed, open the dashboard and click "Smart
+              Scan" or "Run Scan." The software will automatically check your
+              system files, background processes, and connected drives for any
+              threats.
+            </p>
+          </div>
+
+          <div class="border-b border-slate-700 pb-4">
+            <button
+              onclick="toggleFAQ(this)"
+              class="w-full text-left font-bold flex justify-between items-center py-2"
+            >
+              <span>How do I get rid of a virus?</span>
+              <i class="fa-solid fa-chevron-down text-sm text-primary"></i>
+            </button>
+            <p class="hidden pt-2 text-slate-400">
+              If you suspect an infection, disconnect from the internet
+              immediately to prevent the virus from spreading. Run a "Full
+              System Scan" using your antivirus software. If it finds a threat,
+              the software will automatically isolate (quarantine) or remove the
+              malicious files for you.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contacts" class="py-20 bg-slate-950 text-white">
+      <div class="container mx-auto px-6 max-w-6xl">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-black mb-4">Contact Us</h2>
+          <p class="text-slate-400">
+            Our security experts are available 24/7 to keep your devices
+            protected.
+          </p>
+        </div>
+
+        <div class="grid lg:grid-cols-3 gap-12">
+          <div
+            class="bg-slate-900 p-8 rounded-2xl border border-slate-800 space-y-8"
+          >
+            <div>
+              <h3 class="font-bold text-xl mb-4 text-primary">Headquarters</h3>
+              <p class="text-slate-400">
+                123 Cyber Way<br />Secure City, CA 94043<br />United States
+              </p>
+            </div>
+            <div>
+              <h3 class="font-bold text-xl mb-4 text-primary">Helping Hours</h3>
+              <p class="text-slate-400">
+                Monday - Friday<br />8:00 AM - 6:00 PM PST
+              </p>
+              <p class="text-sm text-slate-500 mt-2 italic">
+                Priority support available for enterprise subscribers.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="lg:col-span-2 bg-slate-900 p-8 rounded-2xl border border-slate-800"
+          >
+            <form class="grid md:grid-cols-2 gap-4">
+              <input
+                type="text"
+                placeholder="Full Name"
+                class="p-3 bg-slate-950 border border-slate-700 rounded-lg focus:ring-2 focus:ring-primary outline-none"
+              />
+              <input
+                type="email"
+                placeholder="Business Email"
+                class="p-3 bg-slate-950 border border-slate-700 rounded-lg focus:ring-2 focus:ring-primary outline-none"
+              />
+              <select
+                class="md:col-span-2 p-3 bg-slate-950 border border-slate-700 rounded-lg focus:ring-2 focus:ring-primary outline-none text-slate-400"
+              >
+                <option>General Inquiry</option>
+                <option>Technical Help</option>
+                <option>Enterprise Licensing</option>
+              </select>
+              <textarea
+                placeholder="How can we assist you today?"
+                rows="4"
+                class="md:col-span-2 p-3 bg-slate-950 border border-slate-700 rounded-lg focus:ring-2 focus:ring-primary outline-none"
+              ></textarea>
+              <button
+                class="md:col-span-2 bg-primary hover:bg-blue-600 transition-all duration-300 py-3 rounded-lg font-bold"
+              >
+                Submit Ticket
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="bg-slate-950 border-t border-slate-800 pt-16 pb-8">
+      <div class="container mx-auto px-6">
+        <div class="grid md:grid-cols-4 gap-12 mb-12">
+          <div class="col-span-1 md:col-span-2">
+            <h3 class="text-2xl font-black text-white mb-4">OnlineHelp</h3>
+            <p class="text-slate-400 max-w-sm">
+              Next-generation threat detection and endpoint security. Protecting
+              U.S. businesses and homes with enterprise-grade technology.
+            </p>
+          </div>
+
+          <div>
+            <h4 class="font-bold text-white mb-4">Navigation</h4>
+            <ul class="space-y-2 text-slate-400">
+              <li>
+                <a href="#" class="hover:text-primary transition-colors"
+                  >Features</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-primary transition-colors"
+                  >Pricing</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-primary transition-colors"
+                  >About Us</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-bold text-white mb-4">Legal</h4>
+            <ul class="space-y-2 text-slate-400">
+              <li>
+                <a href="./privacy.html" class="hover:text-primary transition-colors"
+                  >Privacy Policy</a
+                >
+              </li>
+              <li>
+                <a href="./terms.html" class="hover:text-primary transition-colors"
+                  >Terms of Service</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-primary transition-colors"
+                  >Security Disclosure</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div
+          class="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-slate-900"
+        >
+          <p class="text-slate-500 text-sm">
+            &copy; 2026 OnlineHelp Inc. All rights reserved.
+          </p>
+
+          <div class="flex gap-6 mt-4 md:mt-0">
+            <a href="#" class="text-slate-400 hover:text-white text-xl"
+              ><i class="fa-brands fa-linkedin"></i
+            ></a>
+            <a href="#" class="text-slate-400 hover:text-white text-xl"
+              ><i class="fa-brands fa-x-twitter"></i
+            ></a>
+            <a href="#" class="text-slate-400 hover:text-white text-xl"
+              ><i class="fa-brands fa-github"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      function toggleFAQ(el) {
+        const content = el.nextElementSibling;
+        content.classList.toggle("hidden");
+      }
+
+      document.getElementById("menu-btn").addEventListener("click", () => {
+        // Add mobile menu logic here
+        alert("Mobile menu clicked!");
+      });
+    </script>
+
+    <script>
+      // Intersection Observer for Animation
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              const counters = document.querySelectorAll("[data-target]");
+              counters.forEach((counter) => {
+                const updateCount = () => {
+                  const target = +counter.getAttribute("data-target");
+                  const suffix = counter.getAttribute("data-suffix") || "";
+                  const count = +counter.innerText.replace(/\D/g, ""); // Removes non-digits
+                  const increment = target / 100;
+
+                  if (count < target) {
+                    counter.innerText = Math.ceil(count + increment) + suffix;
+                    setTimeout(updateCount, 20);
+                  } else {
+                    counter.innerText = target + suffix;
+                  }
+                };
+                updateCount();
+              });
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.5 },
+      );
+
+      observer.observe(document.querySelector("#stats"));
+    </script>
+
+    <script>
+      const menuBtn = document.getElementById("menu-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      menuBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+        // Swap icon
+        const icon = menuBtn.querySelector("i");
+        icon.classList.toggle("fa-bars");
+        icon.classList.toggle("fa-times");
+      });
+
+      // Smooth scroll behavior for links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          document.querySelector(this.getAttribute("href")).scrollIntoView({
+            behavior: "smooth",
+          });
+          // Close mobile menu if open
+          if (!mobileMenu.classList.contains("hidden")) {
+            mobileMenu.classList.add("hidden");
+            menuBtn.querySelector("i").classList.replace("fa-times", "fa-bars");
+          }
+        });
+      });
+    </script>
+
+    <script>
+      function runHeroScan() {
+        // UI Transitions on the Left
+        document.getElementById("scan-init-content").classList.add("hidden");
+        document.getElementById("scan-running").classList.remove("hidden");
+
+        const bar = document.getElementById("hero-progress-bar");
+        const status = document.getElementById("hero-status-text");
+        const percent = document.getElementById("scan-percent");
+        const formContainer = document.getElementById("form-container");
+
+        const stages = [
+          { p: 20, t: "Scanning File System..." },
+          { p: 45, t: "Checking Registry..." },
+          { p: 70, t: "Analyzing Network..." },
+          { p: 100, t: "Scan Complete!" },
+        ];
+
+        let i = 0;
+        const interval = setInterval(() => {
+          if (i < stages.length) {
+            bar.style.width = stages[i].p + "%";
+            percent.innerText = stages[i].p + "%";
+            status.innerText = stages[i].t;
+            i++;
+          } else {
+            clearInterval(interval);
+            // Highlight the form on the right when scan finishes
+            formContainer.classList.add(
+              "ring-2",
+              "ring-primary",
+              "scale-[1.02]",
+            );
+            status.innerHTML =
+              '<span class="text-green-500">3 Vulnerabilities Found!</span>';
+          }
+        }, 1000);
+      }
+
+      function handleFinalSubmit(e) {
+        e.preventDefault();
+
+        // Get email for the thank you message
+        const emailValue = e.target.querySelector('input[type="email"]').value;
+        document.getElementById("display-email").innerText = emailValue;
+
+        // Transition form to Thank You state
+        document.getElementById("lead-form").classList.add("hidden");
+        document.querySelector("#form-container h3").classList.add("hidden");
+        document.querySelector("#form-container p").classList.add("hidden");
+        document.getElementById("thank-you-state").classList.remove("hidden");
+
+        // Remove the highlight ring
+        document
+          .getElementById("form-container")
+          .classList.remove("ring-2", "ring-primary");
+      }
+    </script>
+
+    <script>
+      function openExpertModal() {
+        const modal = document.getElementById("expert-modal");
+        const content = document.getElementById("expert-modal-content");
+
+        // Close mobile menu if open
+        document.getElementById("mobile-menu").classList.add("hidden");
+
+        modal.classList.remove("hidden");
+        modal.classList.add("flex");
+
+        setTimeout(() => {
+          content.classList.remove("scale-95", "opacity-0");
+          content.classList.add("scale-100", "opacity-100");
+        }, 10);
+      }
+
+      function closeExpertModal() {
+        const modal = document.getElementById("expert-modal");
+        modal.classList.add("hidden");
+        modal.classList.remove("flex");
+
+        // Reset for next time
+        setTimeout(() => {
+          document.getElementById("expert-header").classList.remove("hidden");
+          document.getElementById("expert-form").classList.remove("hidden");
+          document.getElementById("expert-thank-you").classList.add("hidden");
+        }, 500);
+      }
+
+      function handleExpertSubmit(e) {
+        e.preventDefault();
+
+        // Switch to Thank You state
+        document.getElementById("expert-header").classList.add("hidden");
+        document.getElementById("expert-form").classList.add("hidden");
+        document.getElementById("expert-thank-you").classList.remove("hidden");
+      }
+    </script>
+  </body>
+</html>
